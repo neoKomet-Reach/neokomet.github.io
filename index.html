@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">[Company name]</div>
+  <h1>Tell us what you're building.</h1>
+  <p>Our business is a specialized B2B lead generation and outbound sales agency that helps staffing 
+and recruitment firms acquire new hiring clients. Instead of simply providing databases or 
+contact lists, we build a complete client acquisition system that identifies companies actively 
+hiring, reaches out to key decision-makers, qualifies their interest, and books meetings for 
+staffing agencies. This enables recruitment firms to focus on what they do best—placing 
+candidates—while we consistently build their sales pipeline. </p>
+</header>
+
+<main>
+    <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>What We Do</span>
+
+        <h2>
+          Everything you need to build a predictable pipeline
+        </h2>
+
+        <p>
+          From prospect research to appointment setting,
+          we manage the entire lead generation process.
+        </p>
+      </div>
+
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-icon">◎</div>
+
+          <h3>Lead Generation</h3>
+
+          <p>
+            Build targeted lists of verified companies actively
+            hiring and connect with the right decision-makers.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">✉</div>
+
+          <h3>Cold Email Outreach</h3>
+
+          <p>
+            Launch personalized outbound email campaigns that 
+            generate qualified conversations with potential 
+            clients.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">✓</div>
+
+          <h3>Lead Qualification</h3>
+
+          <p>
+            Screen and qualify prospects based on hiring
+            intent, urgency, and business fit before passing 
+            them to your team.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">🗓</div>
+
+          <h3>Appointment Setting</h3>
+
+          <p>
+            Book meetings directly with qualified hiring 
+            companies, so your team can focus on closing deals.
+          </p>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">◷</div>
+
+          <h3>Campaign Reporting</h3>
+
+          <p>
+            Track campaign performance with actionable insights, 
+            reply metrics, and qualified lead reports.
+          </p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="section-label">— Inquiry</div>
+  <form id="inquiryForm" novalidate>
+    <div class="field">
+      <label for="name">Name<span class="req">*</span></label>
+      <input type="text" id="name" name="name" required autocomplete="name">
+    </div>
+
+    <div class="field">
+      <label for="email">Email<span class="req">*</span></label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+    </div>
+
+    <div class="field">
+      <label for="project">Service<span class="req">*</span></label>
+      <select id="project" name="project" required>
+        <option value="" disabled selected>Choose one</option>
+        <option>Lead Generation</option>
+        <option>Cold Email Outreach</option>
+        <option>Lead Qualification</option>
+        <option>Appointment Setting</option>
+        <option>Campaign Reporting</option>
+      </select>
+    </div>
+
+    <div class="field stacked">
+      <label for="message">What are you hoping to do?<span class="req">*</span></label>
+      <textarea id="message" name="message" required placeholder="Tell us about the site, the timeline, and anything else that matters."></textarea>
+    </div>
+
+    <button type="submit">Send inquiry</button>
+    <div class="status" id="status"></div>
+  </form>
+</main>
+
+<footer>
+  <span>[Company Name]</span>
+  <span>email</span>
+</footer>
+
+<script>
+  // Point this at wherever your backend is running.
+  // Local dev default matches server.js's PORT (3001).
+  const API_URL = 'http://localhost:3001/api/inquiries';
+
+  const form = document.getElementById('inquiryForm');
+  const status = document.getElementById('status');
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  function setFieldError(fieldName, message){
+    const field = form.querySelector(`[name="${fieldName}"]`);
+    if(!field) return;
+    field.style.boxShadow = message ? '0 2px 0 0 var(--clay)' : '';
+  }
+
+  function clearFieldErrors(){
+    ['name','email','phone','project','message'].forEach((f) => setFieldError(f, ''));
+  }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    status.classList.remove('ok','err','show');
+    clearFieldErrors();
+
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(function(field){
+      if(!field.value.trim()) valid = false;
+    });
+
+    if(!valid){
+      status.textContent = 'Please fill in the required fields before sending.';
+      status.classList.add('err','show');
+      return;
+    }
+
+    const payload = Object.fromEntries(new FormData(form).entries());
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if(!res.ok){
+        if(data.errors){
+          Object.entries(data.errors).forEach(([field, message]) => setFieldError(field, message));
+        }
+        status.textContent = 'Please check the highlighted fields and try again.';
+        status.classList.add('err','show');
+        return;
+      }
+
+      status.textContent = "Thanks — your inquiry has been received. We'll reply within two working days.";
+      status.classList.add('ok','show');
+      form.reset();
+    } catch (err) {
+      status.textContent = "Couldn't reach the server. Please try again in a moment.";
+      status.classList.add('err','show');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send inquiry';
+    }
+  });
+</script>
+
+</body>
+</html>
