@@ -809,14 +809,6 @@ letter-spacing: -2px;
 grid-template-columns: 1fr 1fr;
 }
 
-.process-grid {
-grid-template-columns: 1fr 1fr;
-}
-
-.results-grid {
-grid-template-columns: 1fr 1fr;
-}
-
 .inquiry-wrapper {
 grid-template-columns: 1fr;
 gap: 45px;
@@ -832,16 +824,6 @@ font-size: 2.3rem;
 
 .inquiry-form-card {
 padding: 32px;
-}
-
-.founders-grid {
-grid-template-columns: 1fr;
-max-width: 500px;
-margin: auto;
-}
-
-.founder-image {
-  height: 380px;
 }
 
 }
@@ -893,4 +875,57 @@ letter-spacing: -1px;
 .service-options {
     grid-template-columns: 1fr;
 }
+
+.founders-grid {
+    display: flex;
+    flex-wrap: nowrap;
+
+    gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* Smooth touch scrolling */
+    -webkit-overflow-scrolling: touch;
+
+    /* Snap cards while scrolling */
+    scroll-snap-type: x mandatory;
+
+    /* Allow card shadow to remain visible */
+    padding: 5px 20px 25px 5px;
+
+    max-width: none;
+    margin: 0;
+  }
+
+
+  /* Individual founder card */
+  .founder-card {
+    flex: 0 0 85%;
+
+    scroll-snap-align: start;
+
+    /* Prevent cards from shrinking */
+    min-width: 0;
+  }
+
+
+  /* Founder image */
+  .founder-image {
+    height: 300px;
+  }
+
+
+  /* Hide scrollbar - Chrome, Safari, Edge */
+  .founders-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* Hide scrollbar - Firefox */
+  .founders-grid {
+    scrollbar-width: none;
+  }
+
+
 }
