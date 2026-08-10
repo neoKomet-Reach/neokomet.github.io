@@ -753,6 +753,43 @@ transition: transform 0.2s ease;
 transform: translateX(4px);
 }
 
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-success.show {
+  display: block;
+}
+
+.success-icon {
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #e8f8ef;
+  color: #20bf6b;
+
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.form-success h3 {
+  margin-bottom: 8px;
+}
+
+.form-success p {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
 
 /* PRIVACY */
 
