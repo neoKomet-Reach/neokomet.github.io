@@ -812,6 +812,12 @@ background: #f4f2ff;
 color: var(--primary);
 }
 
+.form-group:has(input:required) label::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+
 /* SUBMIT BUTTON */
 
 .form-submit {

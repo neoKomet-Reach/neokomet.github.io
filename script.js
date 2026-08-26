@@ -37,24 +37,6 @@ const otherService = document.getElementById("otherService");
 const otherServiceText = document.getElementById("otherServiceText");
 
 /*
-* Show/hide the "Other" service text field
-*/
-// otherService.addEventListener("change", function () {
-
-// if (this.checked) {
-
-//     otherServiceText.style.display = "block";
-//     otherServiceText.required = true;
-
-// } else {
-
-//     otherServiceText.style.display = "none";
-//     otherServiceText.required = false;
-//     otherServiceText.value = "";
-
-// }
-
-// });
 
 
 /*
@@ -97,3 +79,4 @@ setTimeout(function () {
 }, 1000);
 
 });
+
