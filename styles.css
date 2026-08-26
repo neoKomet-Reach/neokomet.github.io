@@ -1175,6 +1175,13 @@ gap: 22px;
 }
 
 /* ---------------- MOBILE ---------------- */
+@media (max-width: 500px) {
+
+    .logo img {
+        width: 145px;
+    }
+
+}
 
 @media (max-width: 900px) {
 .nav-links li:not(:last-child) {
