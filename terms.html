@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Terms of Service for neoKomet Reach."
+  >
+
+  <title>Terms of Service | neoKomet Reach</title>
+
+  <link rel="icon" href="images/icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* ==============================
+       LEGAL HERO
+    ============================== */
+
+    .legal-hero {
+      padding: 90px 0 70px;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(11, 79, 138, 0.10) 0,
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 5% 80%,
+          rgba(159, 169, 179, 0.10) 0,
+          transparent 28%
+        ),
+        #ffffff;
+    }
+
+    .legal-hero-content {
+      max-width: 800px;
+    }
+
+    .legal-label {
+      display: inline-block;
+
+      margin-bottom: 14px;
+
+      color: var(--primary);
+
+      font-size: 0.8rem;
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .legal-hero h1 {
+      margin-bottom: 18px;
+
+      font-size: clamp(2.5rem, 5vw, 4rem);
+
+      line-height: 1.1;
+
+      letter-spacing: -2px;
+    }
+
+    .legal-hero p {
+      color: var(--text);
+
+      font-size: 1rem;
+
+      line-height: 1.7;
+    }
+
+    .legal-date {
+      margin-top: 20px;
+
+      color: var(--light-text);
+
+      font-size: 0.85rem;
+    }
+
+
+    /* ==============================
+       LEGAL CONTENT
+    ============================== */
+
+    .legal-section {
+      padding: 80px 0 100px;
+    }
+
+    .legal-layout {
+      display: grid;
+
+      grid-template-columns: 220px 1fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+
+    /* ==============================
+       TABLE OF CONTENTS
+    ============================== */
+
+    .legal-toc {
+      position: sticky;
+
+      top: 100px;
+    }
+
+    .legal-toc h3 {
+      margin-bottom: 15px;
+
+      font-size: 0.85rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+    .legal-toc a {
+      display: block;
+
+      padding: 7px 0;
+
+      color: var(--light-text);
+
+      font-size: 0.82rem;
+
+      transition: color 0.2s ease;
+    }
+
+    .legal-toc a:hover {
+      color: var(--primary);
+    }
+
+
+    /* ==============================
+       CONTENT
+    ============================== */
+
+    .legal-content {
+      max-width: 800px;
+    }
+
+    .legal-intro {
+      margin-bottom: 45px;
+
+      color: var(--text);
+
+      font-size: 0.95rem;
+
+      line-height: 1.8;
+    }
+
+    .legal-content section {
+      padding: 0;
+
+      margin-bottom: 45px;
+    }
+
+    .legal-content h2 {
+      margin-bottom: 15px;
+
+      font-size: 1.45rem;
+
+      letter-spacing: -0.4px;
+    }
+
+    .legal-content p {
+      margin-bottom: 15px;
+
+      color: var(--text);
+
+      font-size: 0.92rem;
+
+      line-height: 1.8;
+    }
+
+    .legal-content ul {
+      margin: 15px 0 20px;
+
+      padding-left: 22px;
+    }
+
+    .legal-content li {
+      margin-bottom: 10px;
+
+      color: var(--text);
+
+      font-size: 0.92rem;
+
+      line-height: 1.7;
+    }
+
+    .legal-content strong {
+      color: var(--dark);
+    }
+
+
+    /* ==============================
+       CONTACT BOX
+    ============================== */
+
+    .legal-contact {
+      margin-top: 20px;
+
+      padding: 25px 28px;
+
+      background: var(--light-background);
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+    }
+
+    .legal-contact p {
+      margin-bottom: 5px;
+    }
+
+    .legal-contact p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-contact a {
+      color: var(--primary);
+
+      font-weight: 600;
+    }
+
+
+    /* ==============================
+       DISCLAIMER
+    ============================== */
+
+    .legal-disclaimer {
+      margin-top: 60px;
+
+      padding: 20px 22px;
+
+      border-left: 3px solid var(--primary);
+
+      background: var(--light-background);
+
+      border-radius: 0 8px 8px 0;
+    }
+
+    .legal-disclaimer p {
+      margin: 0;
+
+      font-size: 0.82rem;
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 800px) {
+
+      .legal-layout {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
+      .legal-toc {
+        position: static;
+
+        padding: 20px;
+
+        background: var(--light-background);
+
+        border: 1px solid var(--border);
+
+        border-radius: 10px;
+      }
+
+      .legal-toc a {
+        display: inline-block;
+
+        margin-right: 15px;
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .legal-hero {
+        padding: 65px 0 50px;
+      }
+
+      .legal-section {
+        padding: 55px 0 70px;
+      }
+
+      .legal-hero h1 {
+        font-size: 2.5rem;
+
+        letter-spacing: -1.5px;
+      }
+
+      .legal-content h2 {
+        font-size: 1.3rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a href="index.html" class="logo">
+
+        <img
+          src="images/Logo.png"
+          alt="neoKomet Reach"
+        >
+
+      </a>
+
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="about.html">
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#services">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#process">
+            How It Works
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="index.html#contact"
+            class="nav-button"
+          >
+            Contact Us!
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <!-- ==============================
+       HERO
+  ============================== -->
+
+  <main>
+
+    <section class="legal-hero">
+
+      <div class="container">
+
+        <div class="legal-hero-content">
+
+          <span class="legal-label">
+            LEGAL
+          </span>
+
+          <h1>
+            Terms of Service
+          </h1>
+
+          <p>
+            The terms governing access to the neoKomet Reach website
+            and the provision of our B2B lead generation and outbound
+            marketing services.
+          </p>
+
+          <div class="legal-date">
+
+            <strong>Effective Date:</strong>
+            15/08/2026
+
+            &nbsp; | &nbsp;
+
+            <strong>Last Updated:</strong>
+            10/08/2026
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         TERMS
+    ============================== -->
+
+    <section class="legal-section">
+
+      <div class="container">
+
+        <div class="legal-layout">
+
+
+          <!-- TABLE OF CONTENTS -->
+
+          <aside class="legal-toc">
+
+            <h3>
+              On this page
+            </h3>
+
+            <a href="#acceptance">
+              Acceptance of Terms
+            </a>
+
+            <a href="#services">
+              Description of Services
+            </a>
+
+            <a href="#pricing">
+              Quotes & Pricing
+            </a>
+
+            <a href="#responsibilities">
+              Client Responsibilities
+            </a>
+
+            <a href="#campaign-data">
+              Data Used in Campaigns
+            </a>
+
+            <a href="#ip">
+              Intellectual Property
+            </a>
+
+            <a href="#liability">
+              Limitation of Liability
+            </a>
+
+            <a href="#termination">
+              Termination
+            </a>
+
+            <a href="#jurisdiction">
+              Governing Law
+            </a>
+
+            <a href="#international">
+              Future International Clients
+            </a>
+
+            <a href="#changes">
+              Changes to These Terms
+            </a>
+
+            <a href="#contact">
+              Contact Us
+            </a>
+
+          </aside>
+
+
+          <!-- CONTENT -->
+
+          <article class="legal-content">
+
+
+            <p class="legal-intro">
+
+              These Terms of Service govern access to
+              <strong>neokometreach.com</strong> and the provision of
+              B2B lead generation and outbound marketing services by
+              neoKomet Reach.
+
+            </p>
+
+
+            <!-- B1 -->
+
+            <section id="acceptance">
+
+              <h2>
+                B1. Acceptance of Terms
+              </h2>
+
+              <p>
+                By accessing neokometreach.com, submitting a form,
+                requesting a quote, or engaging our Services, you agree
+                to be bound by these Terms of Service.
+              </p>
+
+              <p>
+                If you do not agree to these terms, please do not use
+                our Website or Services.
+              </p>
+
+            </section>
+
+
+            <!-- B2 -->
+
+            <section id="services">
+
+              <h2>
+                B2. Description of Services
+              </h2>
+
+              <p>
+                neoKomet Reach provides B2B lead generation and
+                outbound marketing services to clients based in India,
+                which may include but are not limited to:
+              </p>
+
+              <ul>
+
+                <li>
+                  <strong>Prospect list building</strong> — using
+                  third-party data platforms to identify and compile
+                  business contact information.
+                </li>
+
+                <li>
+                  <strong>Cold email campaign management</strong> —
+                  including copywriting, sequencing, and sending on
+                  behalf of clients.
+                </li>
+
+                <li>
+                  <strong>Reporting and analytics</strong> — covering
+                  campaign performance, replies, and booked meetings.
+                </li>
+
+                <li>
+                  <strong>Appointment setting</strong> — coordinating
+                  and scheduling meetings between clients and
+                  prospective business contacts.
+                </li>
+
+              </ul>
+
+              <p>
+                The exact scope of Services for each client is defined
+                in a separate signed Scope of Work or Service Agreement,
+                which takes precedence over this general description in
+                the event of any conflict.
+              </p>
+
+            </section>
+
+
+            <!-- B3 -->
+
+            <section id="pricing">
+
+              <h2>
+                B3. Quotes and Pricing
+              </h2>
+
+              <ul>
+
+                <li>
+                  <strong>Quote validity</strong> — quotes provided via
+                  the Website or in correspondence are estimates and
+                  valid for 30 days unless otherwise stated.
+                </li>
+
+                <li>
+                  <strong>Final pricing</strong> — confirmed only upon
+                  signed agreement between neoKomet Reach and the Client.
+                </li>
+
+                <li>
+                  <strong>Payment terms</strong> — as specified in the
+                  individual Service Agreement; typically an advance
+                  payment is required before work begins.
+                </li>
+
+                <li>
+                  <strong>Taxes</strong> — all quoted prices are
+                  exclusive of applicable GST unless stated otherwise.
+                </li>
+
+                <li>
+                  <strong>No obligation</strong> — requesting a quote
+                  or submitting an enquiry does not create a binding
+                  obligation on either party until a Service Agreement
+                  is signed.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- B4 -->
+
+            <section id="responsibilities">
+
+              <h2>
+                B4. Client Responsibilities
+              </h2>
+
+              <ul>
+
+                <li>
+                  <strong>Accurate information</strong> — Clients must
+                  provide accurate business information, target criteria,
+                  and any required approvals for campaigns run on their
+                  behalf.
+                </li>
+
+                <li>
+                  <strong>Lawful use</strong> — Clients must not
+                  instruct us to target audiences or send content that
+                  is fraudulent, deceptive, or violates applicable
+                  Indian law.
+                </li>
+
+                <li>
+                  <strong>Timely feedback</strong> — Clients are
+                  responsible for reviewing and approving campaign
+                  materials within agreed timeframes to avoid delays.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- B5 -->
+
+            <section id="campaign-data">
+
+              <h2>
+                B5. Data Used in Campaigns
+              </h2>
+
+              <ul>
+
+                <li>
+                  <strong>Sourcing</strong> — contact data used in
+                  outbound campaigns is sourced from third-party B2B
+                  data platforms and publicly available business
+                  information.
+                </li>
+
+                <li>
+                  <strong>Accuracy</strong> — while we take reasonable
+                  steps to verify data quality, we do not guarantee 100%
+                  accuracy of third-party sourced contact information.
+                </li>
+
+                <li>
+                  <strong>No resale</strong> — data compiled for a
+                  specific Client engagement is used solely for that
+                  engagement and is not resold or shared with other
+                  clients.
+                </li>
+
+                <li>
+                  <strong>Opt-outs</strong> — any opt-out or
+                  do-not-contact request received during a campaign is
+                  honoured immediately and the contact is removed from
+                  future outreach.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- B6 -->
+
+            <section id="ip">
+
+              <h2>
+                B6. Intellectual Property
+              </h2>
+
+              <ul>
+
+                <li>
+                  <strong>Website content</strong> — all content on
+                  neokometreach.com, including text, graphics, and
+                  logos, is the property of neoKomet Reach and may not
+                  be copied or reproduced without permission.
+                </li>
+
+                <li>
+                  <strong>Client deliverables</strong> — contact lists,
+                  campaign copy, and reports created specifically for a
+                  Client become the property of that Client upon full
+                  payment, unless otherwise agreed in the Service
+                  Agreement.
+                </li>
+
+                <li>
+                  <strong>Our methodology</strong> — our internal
+                  processes, templates, and systems remain the
+                  intellectual property of neoKomet Reach and are not
+                  transferred to Clients.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- B7 -->
+
+            <section id="liability">
+
+              <h2>
+                B7. Limitation of Liability
+              </h2>
+
+              <ul>
+
+                <li>
+                  <strong>No guaranteed results</strong> — while we
+                  apply industry best practices, we do not guarantee
+                  specific numbers of replies, meetings, or conversions,
+                  as outcomes depend on factors outside our control.
+                </li>
+
+                <li>
+                  <strong>Third-party tools</strong> — we are not liable
+                  for outages, errors, or data inaccuracies originating
+                  from third-party platforms we use to deliver Services.
+                </li>
+
+                <li>
+                  <strong>Maximum liability</strong> — our total
+                  liability for any claim arising from the Services is
+                  limited to the fees paid by the Client for the
+                  specific engagement in question.
+                </li>
+
+                <li>
+                  <strong>Indirect damages</strong> — we are not liable
+                  for indirect, incidental, or consequential damages,
+                  including loss of profits or business opportunities.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- B8 -->
+
+            <section id="termination">
+
+              <h2>
+                B8. Termination
+              </h2>
+
+              <ul>
+
+                <li>
+                  <strong>Notice period</strong> — either party may
+                  terminate an ongoing engagement with 30 days' written
+                  notice, unless otherwise specified in the Service
+                  Agreement.
+                </li>
+
+                <li>
+                  <strong>Outstanding fees</strong> — any fees owed for
+                  work completed up to the termination date remain
+                  payable.
+                </li>
+
+                <li>
+                  <strong>Data on termination</strong> — upon
+                  termination, Client-owned data and deliverables will
+                  be provided to the Client within a reasonable
+                  timeframe.
+                </li>
+
+              </ul>
+
+            </section>
+
+
+            <!-- B9 -->
+
+            <section id="jurisdiction">
+
+              <h2>
+                B9. Governing Law and Jurisdiction
+              </h2>
+
+              <p>
+                These Terms are governed by the laws of India.
+              </p>
+
+              <p>
+                Any disputes arising from these Terms or the Services
+                shall be subject to the exclusive jurisdiction of the
+                courts located in Hyderabad, Telangana, India.
+              </p>
+
+            </section>
+
+
+            <!-- B10 -->
+
+            <section id="international">
+
+              <h2>
+                B10. Future International Clients
+              </h2>
+
+              <p>
+                neoKomet Reach currently serves clients based in India
+                only.
+              </p>
+
+              <p>
+                Should we begin offering Services to clients outside
+                India — including the United States, United Kingdom, or
+                other jurisdictions — this Privacy Policy and these
+                Terms will be reviewed and updated to reflect applicable
+                international data protection and consumer protection
+                laws before any such Services commence.
+              </p>
+
+            </section>
+
+
+            <!-- B11 -->
+
+            <section id="changes">
+
+              <h2>
+                B11. Changes to These Terms
+              </h2>
+
+              <p>
+                We may update this Privacy Policy and these Terms of
+                Service from time to time to reflect changes in our
+                practices or for legal, operational, or regulatory
+                reasons.
+              </p>
+
+              <p>
+                The updated version will be posted on this page with a
+                revised "Last Updated" date.
+              </p>
+
+              <p>
+                Continued use of our Website or Services after changes
+                are posted constitutes acceptance of the revised terms.
+              </p>
+
+            </section>
+
+
+            <!-- B12 -->
+
+            <section id="contact">
+
+              <h2>
+                B12. Contact Us
+              </h2>
+
+              <p>
+                For questions about these Terms of Service, contact us
+                at:
+              </p>
+
+              <div class="legal-contact">
+
+                <p>
+                  <strong>Email:</strong>
+
+                  <a href="mailto:founders@neokomet.com">
+                    founders@neokomet.com
+                  </a>
+                </p>
+
+                <p>
+                  <strong>Business location:</strong>
+                  Hyderabad, Telangana, India
+                </p>
+
+              </div>
+
+            </section>
+
+
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+        © 2026 neoKomet Reach. All rights reserved.
+      </div>
+
+      <div class="footer-links">
+        <a href="privacypolicy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="#">LinkedIn</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

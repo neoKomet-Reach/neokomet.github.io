@@ -5,15 +5,17 @@
 }
 
 :root {
-  --primary: #D7C69D;
-  --primary-dark: #ffef61e2;
-  --secondary: #003b59;
-  --text: #475467;
+  --primary: #0A4B8C;
+  --primary-dark: #062F5A;
+  --secondary: #071321;
+  --text: #344054;
   --light-text: #667085;
-  --background: #ffffff;
-  --light-background: #f8f9fc;
-  --border: #eaecf0;
-  --success: #12b76a;
+  --background: #FFFFFF;
+  --light-background: #F6F8FB;
+  --border: #DCE1E7;
+  --accent: #A8B0B8;
+  --success: #12B76A;
+  --white: #ffffff;
 }
 
 html {
@@ -55,6 +57,16 @@ a {
 }
 
 /* ---------------- NAVBAR ---------------- */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
 
 header {
   position: sticky;
